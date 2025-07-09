@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flashcards de Vocabulário em Inglês</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f6f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .flashcards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .flashcard {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
+    .flashcard:hover {
+      transform: scale(1.02);
+      background: #eaf6ff;
+    }
+    .flashcard h3 {
+      margin: 0;
+      color: #3498db;
+    }
+    .flashcard .hidden {
+      display: none;
+      margin-top: 10px;
+    }
+    .flashcard.active .hidden {
+      display: block;
+    }
+    .question::before {
+      content: '❓ ';
+    }
+    .answer::before {
+      content: '✅ ';
+      color: green;
+    }
+    .explanation::before {
+      content: '📘 ';
+    }
+    .example::before {
+      content: '✍️ ';
+    }
+    .badge {
+      background-color: #3498db;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flashcards Interativos de Adjetivos em Inglês</h1>
+  <div class="flashcards">
+
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Beautiful <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Beautiful"?</p>
+        <p class="answer">Pretty</p>
+        <p class="explanation">Both describe something or someone with a pleasing appearance.</p>
+        <p class="example">Example: She is a very beautiful woman.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Happy <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Happy"?</p>
+        <p class="answer">Joyful</p>
+        <p class="explanation">Both indicate feelings of joy and contentment.</p>
+        <p class="example">Example: He is very happy with his new job.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Large <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Large"?</p>
+        <p class="answer">Big</p>
+        <p class="explanation">Both indicate great size or dimension.</p>
+        <p class="example">Example: That is a large house.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Quick <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Quick"?</p>
+        <p class="answer">Fast</p>
+        <p class="explanation">Both refer to something that happens rapidly.</p>
+        <p class="example">Example: He gave a quick response.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Bright <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Bright"?</p>
+        <p class="answer">Brilliant</p>
+        <p class="explanation">Both describe something very illuminated or vivid.</p>
+        <p class="example">Example: The sun is very bright today.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Strong <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Strong"?</p>
+        <p class="answer">Powerful</p>
+        <p class="explanation">Both refer to something or someone with strength or influence.</p>
+        <p class="example">Example: She is a very strong woman.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Clean <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Clean"?</p>
+        <p class="answer">Tidy</p>
+        <p class="explanation">Both mean organized and free from dirt.</p>
+        <p class="example">Example: The room is very clean.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Friendly <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Friendly"?</p>
+        <p class="answer">Kind</p>
+        <p class="explanation">Both describe someone nice or gentle.</p>
+        <p class="example">Example: The clerk was very friendly.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Lazy <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Lazy"?</p>
+        <p class="answer">Idle</p>
+        <p class="explanation">Both refer to unwillingness to do something.</p>
+        <p class="example">Example: He was lazy all day.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Intelligent <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Intelligent"?</p>
+        <p class="answer">Smart</p>
+        <p class="explanation">Both describe someone with mental ability or reasoning.</p>
+        <p class="example">Example: She is very intelligent.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Brave <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Brave"?</p>
+        <p class="answer">Courageous</p>
+        <p class="explanation">Both describe someone who faces danger without fear.</p>
+        <p class="example">Example: The firefighters were very brave.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Funny <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Funny"?</p>
+        <p class="answer">Humorous</p>
+        <p class="explanation">Both describe something that causes laughter.</p>
+        <p class="example">Example: That was a funny joke.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Generous <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Generous"?</p>
+        <p class="answer">Charitable</p>
+        <p class="explanation">Both describe someone who gives freely.</p>
+        <p class="example">Example: She is very generous with her time.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Honest <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Honest"?</p>
+        <p class="answer">Truthful</p>
+        <p class="explanation">Both describe someone who tells the truth.</p>
+        <p class="example">Example: He gave an honest answer.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Patient <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Patient"?</p>
+        <p class="answer">Tolerant</p>
+        <p class="explanation">Both describe someone who can wait calmly.</p>
+        <p class="example">Example: The teacher is very patient with students.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Polite <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Polite"?</p>
+        <p class="answer">Courteous</p>
+        <p class="explanation">Both describe someone with good manners.</p>
+        <p class="example">Example: The child was very polite to the guests.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Serious <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Serious"?</p>
+        <p class="answer">Solemn</p>
+        <p class="explanation">Both describe someone or something not joking around.</p>
+        <p class="example">Example: This is a serious matter.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Shy <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Shy"?</p>
+        <p class="answer">Timid</p>
+        <p class="explanation">Both describe someone who is nervous around others.</p>
+        <p class="example">Example: The new student was shy at first.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Stubborn <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Stubborn"?</p>
+        <p class="answer">Obstinate</p>
+        <p class="explanation">Both describe someone unwilling to change their mind.</p>
+        <p class="example">Example: He was stubborn about his decision.</p>
+      </div>
+    </div>
+    
+    <div class="flashcard" onclick="toggleCard(this)">
+      <h3>Wise <span class='badge'>Adjective</span></h3>
+      <div class="hidden">
+        <p class="question">What is a synonym for "Wise"?</p>
+        <p class="answer">Sage</p>
+        <p class="explanation">Both describe someone with good judgment.</p>
+        <p class="example">Example: The elder gave us wise advice.</p>
+      </div>
+    </div>
+    
+  </div>
+  <script>
+    function toggleCard(card) {
+      card.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
